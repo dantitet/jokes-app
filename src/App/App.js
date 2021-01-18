@@ -5,22 +5,22 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Table from 'react-bootstrap/Table';
-import axios from 'axios';
 import { useState } from 'react';
+import jokeService from '../joke.service';
 
 const App = () => {
   const [joke, setJoke] = useState(null);
   const [history, setHistory] = useState([]);
 
   const fetchJoke = () => {
-    axios
-      .get('https://official-joke-api.appspot.com/random_joke')
+    jokeService
+      .fetchJoke()
       .then((res) => {
         if (joke) {
           setHistory([...history, joke]);
         }
 
-        setJoke(res.data);
+        setJoke(res);
       })
       .catch((err) => {
         console.error(err);
@@ -64,7 +64,7 @@ const App = () => {
 const JokesHistory = (props) => {
   return (
     <Row className="history">
-      <Col xs={4} className="description">
+      <Col xs={12} md={4} className="description">
         <h2>Jokes history</h2>
         <p>Read your favorite jokes from the past again!</p>
         <Button variant="danger" onClick={props.clearHistory}>

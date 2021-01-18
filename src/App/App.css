@@ -53,3 +53,28 @@ body {
   overflow-y: auto;
   max-height: 40vh !important;
 }
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .history .description {
+    height: 300px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .joke h1 {
+    font-size: 1.5rem;
+  }
+
+  .joke p {
+    font-size: 2rem;
+  }
+  .history .description {
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (max-width: 480px) {
+}
