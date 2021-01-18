@@ -1,0 +1,55 @@
+body {
+  background-color: #1e1e1e !important;
+}
+
+.app {
+  height: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+.emoji {
+  font-size: 10rem;
+}
+
+.prompt {
+  color: white;
+}
+
+.prompt {
+  font-size: 4rem;
+}
+
+.joke {
+  border-radius: 40px !important;
+}
+
+.joke h1 {
+  font-size: 2rem;
+}
+
+.joke p {
+  font-size: 3rem;
+  color: #17a2b8;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.history {
+  margin-top: 50px;
+}
+
+.history .description {
+  height: 200px;
+  background-color: #3e444a;
+  border: 1px solid #454d55;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  flex-grow: 0;
+}
+
+.table-wrapper {
+  overflow-y: auto;
+  max-height: 40vh !important;
+}
